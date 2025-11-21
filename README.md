@@ -22,27 +22,20 @@ computer vision models in a real-time application (OpenCV + MediaPipe Pose).
 
 ## Demo
 
-You can create portfolio-ready material from this project by:
+This repository includes:
 
-- Recording a short avatar session:
+- A sample recording of the avatar in action: `assets/avatar_session.mp4`.
+- A screenshot from the Avatar View: `assets/avatar_screenshot.png`.
 
-  ```bash
-  python webcam_avatar.py --record --output avatar_session.mp4
-  ```
+You can re-create these or record your own sessions using:
 
-  and uploading `avatar_session.mp4` as a demo clip (for example in a GitHub
-  release or a portfolio site).
+```bash
+python webcam_avatar.py --record --output avatar_session.mp4
+```
 
-- Capturing a screenshot of the Avatar View window and saving it as
-  `assets/avatar_screenshot.png`, then referencing it here:
+Embedded screenshot:
 
-  ```markdown
-  ![Avatar screenshot](assets/avatar_screenshot.png)
-  ```
-
-This repository does not include pre-generated videos or screenshots so that it
-stays lightweight. The commands above let you generate your own examples that
-match your hardware and lighting.
+![Avatar screenshot](assets/avatar_screenshot.png)
 
 ## Setup
 
