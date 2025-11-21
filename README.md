@@ -24,8 +24,8 @@ computer vision models in a real-time application (OpenCV + MediaPipe Pose).
 
 This repository includes:
 
-- A sample recording of the avatar in action: `assets/avatar_session.mp4`.
-- A screenshot from the Avatar View: `assets/avatar_screenshot.png`.
+- A sample recording of the avatar in action (`assets/avatar_session.mp4`).
+- A screenshot from the Avatar View (`assets/avatar_screenshot.png`).
 
 You can re-create these or record your own sessions using:
 
@@ -37,9 +37,13 @@ Embedded screenshot:
 
 ![Avatar screenshot](assets/avatar_screenshot.png)
 
+Embedded demo video (in browsers that support HTML5 video):
+
+<video src="assets/avatar_session.mp4" controls width="480"></video>
+
 ## Setup
 
-From the project root (this directory):
+From the project root:
 
 ```bash
 python -m venv .venv
@@ -92,7 +96,7 @@ python webcam_avatar.py --record --output avatar_session.mp4
 This records only the **Avatar View** window to the specified output file
 (`avatar_session.mp4` by default if `--output` is not provided).
 
-## How it works (high level)
+## How it works
 
 1. Each frame, the script grabs an image from your webcam.
 2. MediaPipe Pose runs a neural network to detect 3D body landmarks.
