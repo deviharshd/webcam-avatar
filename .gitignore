@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Local recordings
+*.mp4
+*.avi
+*.mov
+
+# Jupyter and editor metadata
+.ipynb_checkpoints/
+.vscode/
+
