@@ -39,8 +39,6 @@ Direct link to the demo video:
 
 - [assets/avatar_session.mp4](assets/avatar_session.mp4)
 
-Embedded demo video (for browsers that support HTML5 video):
-
 <video src="assets/avatar_session.mp4" controls width="480"></video>
 
 ## Screenshot
