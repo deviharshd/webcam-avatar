@@ -1,14 +1,11 @@
 # Webcam Avatar Lab
 
-This project is a clean, self-contained **webcam avatar** demo.
+This repository contains a small, focused **webcam avatar** application.
+It uses **MediaPipe Pose** to track body landmarks from a single webcam and
+renders a 2D humanoid figure that mirrors your movements in real time.
 
-It uses **MediaPipe Pose** (a pre-trained deep neural network) to detect your
-body landmarks from a single webcam, and renders a simple 2D humanoid
-stick-figure that mirrors your movements in real time. There is no physics
-engine involved, so the avatar does not fall over or behave unpredictably.
-
-The goal is to give you a visually clear, smooth, and reliable mirroring
-experience that you can show on your GitHub as an AI + computer-vision project.
+The project is designed as a concise, portfolio-ready example of using
+computer vision models in a real-time application (OpenCV + MediaPipe Pose).
 
 ## Features
 
@@ -25,7 +22,7 @@ experience that you can show on your GitHub as an AI + computer-vision project.
 
 ## Setup
 
-From the project root (`rl-locomotion-starter`):
+From the project root (this directory):
 
 ```bash
 python -m venv .venv
@@ -34,7 +31,7 @@ source .venv/bin/activate      # Linux/macOS
 .venv\Scripts\activate
 
 python -m pip install --upgrade pip
-python -m pip install -r webcam-avatar/requirements.txt
+python -m pip install -r requirements.txt
 ```
 
 This will install:
@@ -45,17 +42,16 @@ This will install:
 
 ## Usage
 
-Run the avatar demo from the project root:
+Run the avatar demo:
 
 ```bash
-python webcam-avatar/webcam_avatar.py
+python webcam_avatar.py
 ```
 
 You should see two windows:
 
 - **Webcam View**: your live camera with a skeleton drawn on your body.
-- **Avatar View**: a stick-figure humanoid on a plain background that mirrors
-  your current pose.
+- **Avatar View**: a stylised stick-figure humanoid that mirrors your pose.
 
 Controls:
 
@@ -70,14 +66,17 @@ Tips for best results:
 
 ### Recording the avatar
 
-To save the avatar view to a video file while it tracks your movements:
+To save the Avatar View to a video file while it tracks your movements:
 
 ```bash
-python webcam-avatar/webcam_avatar.py --record --output avatar_session.mp4
+python webcam_avatar.py --record --output avatar_session.mp4
 ```
 
-This records only the **Avatar View** window to the given output file
+This records only the **Avatar View** window to the specified output file
 (`avatar_session.mp4` by default if `--output` is not provided).
+
+You can use the recorded video or screenshots from the Avatar View window as
+demo material in your portfolio or GitHub README.
 
 ## How it works (high level)
 
@@ -90,8 +89,6 @@ This records only the **Avatar View** window to the given output file
    - Centering on your hip position.
    - Scaling and drawing lines between joints to form a stick-figure.
 
-There is no RL or training loop here: all "intelligence" is in the pre-trained
-pose estimator plus our deterministic retargeting and drawing code.
-
-This makes the behaviour predictable and easy to reason about, while still
-being a genuine AI/computer-vision showcase.
+There is no training loop in this project. All "intelligence" comes from the
+pre-trained pose estimator, while the avatar rendering and smoothing are kept
+simple and deterministic so the behaviour is easy to understand and extend.
