@@ -33,13 +33,18 @@ You can re-create these or record your own sessions using:
 python webcam_avatar.py --record --output avatar_session.mp4
 ```
 
-Embedded screenshot:
+## Video
 
-![Avatar screenshot](assets/avatar_screenshot.png)
-
-Embedded demo video (in browsers that support HTML5 video):
+- Direct link: `assets/avatar_session.mp4`
+- Embedded demo video (for browsers that support HTML5 video):
 
 <video src="assets/avatar_session.mp4" controls width="480"></video>
+
+## Screenshot
+
+Embedded screenshot of the Avatar View:
+
+![Avatar screenshot](assets/avatar_screenshot.png)
 
 ## Setup
 
