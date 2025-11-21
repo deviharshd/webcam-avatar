@@ -15,10 +15,34 @@ computer vision models in a real-time application (OpenCV + MediaPipe Pose).
   - Hips, knees, ankles
 - Two synchronized views:
   - Webcam feed with skeleton overlay.
-  - Clean avatar view drawn on a blank canvas.
-- Basic temporal smoothing to reduce jitter.
-- Centered avatar: movement is shown as pose changes around a stable origin,
-  not as the whole figure sliding off-screen.
+  - Clean avatar view with a stylised humanoid figure.
+- Temporal smoothing to reduce jitter while staying responsive.
+- Avatar is centered and scaled, so motion is shown as changes in pose rather
+  than the figure sliding around the canvas.
+
+## Demo
+
+You can create portfolio-ready material from this project by:
+
+- Recording a short avatar session:
+
+  ```bash
+  python webcam_avatar.py --record --output avatar_session.mp4
+  ```
+
+  and uploading `avatar_session.mp4` as a demo clip (for example in a GitHub
+  release or a portfolio site).
+
+- Capturing a screenshot of the Avatar View window and saving it as
+  `assets/avatar_screenshot.png`, then referencing it here:
+
+  ```markdown
+  ![Avatar screenshot](assets/avatar_screenshot.png)
+  ```
+
+This repository does not include pre-generated videos or screenshots so that it
+stays lightweight. The commands above let you generate your own examples that
+match your hardware and lighting.
 
 ## Setup
 
@@ -74,9 +98,6 @@ python webcam_avatar.py --record --output avatar_session.mp4
 
 This records only the **Avatar View** window to the specified output file
 (`avatar_session.mp4` by default if `--output` is not provided).
-
-You can use the recorded video or screenshots from the Avatar View window as
-demo material in your portfolio or GitHub README.
 
 ## How it works (high level)
 
